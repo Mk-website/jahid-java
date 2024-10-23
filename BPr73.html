@@ -1,0 +1,39 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.util.Scanner;
+
+class BPr73{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter a string: ");
+    String input = scanner.next();
+
+    System.out.print("Enter the starting position: ");
+    int start = scanner.nextInt();
+
+    System.out.print("Enter the ending position: ");
+    int end = scanner.nextInt();
+
+    String result = input.substring(start, end);
+
+    System.out.println("Substring: " + result);
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter a string: mad
+Enter the starting position: 0
+Enter the ending position: 1
+Substring: m
+</p></pre>
+</body>
+</html>

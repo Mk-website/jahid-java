@@ -1,0 +1,36 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.util.Scanner;
+
+class BPr81 {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter a string: ");
+    String input = scanner.next();
+
+    int lineCount = countLines(input);
+
+    System.out.println("Total number of lines: " + lineCount);
+  }
+
+  public static int countLines(String str) {
+    String[] lines = str.split("\n");
+    return lines.length;
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter a string: madhu
+Total number of lines: 1
+</p></pre>
+</body>
+</html>

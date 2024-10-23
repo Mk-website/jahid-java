@@ -1,0 +1,38 @@
+
+
+<html>
+<head>
+<title>Exception Handling</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class Exception11{
+public static void main(String st[]) throws ArithmeticException{
+int a = 32;
+int b = 0;
+if (b == 0){
+throw new ArithmeticException("Cannot divide by zero!");
+} 
+else{
+System.out.println("Result: " + (a / b));
+}
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+C:\javaFolders\Exception Handling>java Exception11
+Exception in thread "main" java.lang.ArithmeticException: Cannot divide by zero!
+        at Exception11.main(exceptions.java:6)
+</p></pre>
+</body>
+</html>

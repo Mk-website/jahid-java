@@ -1,0 +1,46 @@
+
+
+<html>
+<head>
+<title>Exception Handling</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class exception2{
+public static void checkIfOdd(int number) throws IllegalArgumentException{
+if (number % 2 != 0){
+throw new IllegalArgumentException("Number " + number + " is Odd");
+}
+System.out.println("Number " + number + " is Even");
+}
+public static void main(String st[]){
+try{
+checkIfOdd(4);
+} 
+catch(IllegalArgumentException e){
+System.out.println("Caught an IllegalArgumentException: " + e.getMessage());
+}
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+C:\javaFolders\Exception Handling>java exception2
+Caught an IllegalArgumentException: Number 7 is Odd
+
+C:\javaFolders\Exception Handling>javac exception2.java
+
+C:\javaFolders\Exception Handling>java exception2
+Number 4 is Even
+</p></pre>
+</body>
+</html>

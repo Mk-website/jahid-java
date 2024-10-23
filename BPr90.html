@@ -1,0 +1,74 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.util.Scanner;
+class BPr90{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter the size of the array: ");
+    int size = scanner.nextInt();
+
+    int[] array = new int[size];
+
+    System.out.println("Enter the elements of the array:");
+    for (int i = 0; i < size; i++) {
+      array[i] = scanner.nextInt();
+    }
+
+    int[] duplicateValues = findDuplicateValues(array);
+
+    System.out.println("Duplicate values:");
+    for (int i = 0; i < duplicateValues.length; i++) {
+      System.out.print(duplicateValues[i] + " ");
+    }
+  }
+
+  public static int[] findDuplicateValues(int[] array) {
+    int[] result = new int[array.length];
+    int index = 0;
+
+    for (int i = 0; i < array.length; i++) {
+      for (int j = i + 1; j < array.length; j++) {
+        if (array[i] == array[j]) {
+          boolean isDuplicate = false;
+          for (int k = 0; k < index; k++) {
+            if (result[k] == array[i]) {
+              isDuplicate = true;
+              break;
+            }
+          }
+          if (!isDuplicate) {
+            result[index++] = array[i];
+          }
+        }
+      }
+    }
+
+    int[] finalResult = new int[index];
+    for (int i = 0; i < index; i++) {
+      finalResult[i] = result[i];
+    }
+
+    return finalResult;
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter the size of the array: 3
+Enter the elements of the array:
+45
+67
+45
+Duplicate values:
+45
+</p></pre>
+</body>
+</html>

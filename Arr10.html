@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Array</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class smallest{
+public static void main(String[] args){
+int arr[]={32,77,45,41,50,22,101,28};
+System.out.println("Smallest element in an Array : ");
+int min=arr[0];
+for(int i = 1 ; i < arr.length ; i++){
+if(arr[i] < min){
+min = arr[i];
+}
+}
+System.out.println(min);
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+Smallest element in an Array :
+22
+</p></pre>
+</body>
+</html>

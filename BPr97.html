@@ -1,0 +1,40 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class BPr97{
+    public static void main(String[] args) {
+        int[] array = {0, 1, 0, 1, 0, 0, 1, 1, 0};
+
+        int nextZero = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0) {
+                // Swap array[i] with array[nextZero]
+                int temp = array[nextZero];
+                array[nextZero] = array[i];
+                array[i] = temp;
+
+                nextZero++;
+            }
+        }
+
+        System.out.println("Segregated array:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Segregated array:
+0 0 0 0 0 1 1 1 1
+</p></pre>
+</body>
+</html>

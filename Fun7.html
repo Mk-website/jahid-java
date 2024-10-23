@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Function</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class Fun7{
+
+    public static boolean isValidPassword(String password) {
+        if (password == null || password.length() < 8) {
+            return false; // password should be at least 8 characters long
+        }
+        boolean hasUppercase = false;
+        boolean hasLowercase = false;
+        boolean hasDigit = false;
+        boolean hasSpecialChar = false;
+        for (char c : password.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                hasUppercase = true;
+            } else if (Character.isLowerCase(c)) {
+                hasLowercase = true;
+            } else if (Character.isDigit(c)) {
+                hasDigit = true;
+            } else if (!Character.isLetterOrDigit(c)) {
+                hasSpecialChar = true;
+            }
+            if (hasUppercase && hasLowercase && hasDigit && hasSpecialChar) {
+                break;
+            }
+        }
+        return hasUppercase && hasLowercase && hasDigit && hasSpecialChar;
+    }
+
+    public static void main(String[] args) {
+        String password = "MyP@ssw0rd";
+        if (isValidPassword(password)) {
+            System.out.println("Valid password");
+        } else {
+            System.out.println("Invalid password");
+        }
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Valid password
+</p></pre>
+</body>
+</html>

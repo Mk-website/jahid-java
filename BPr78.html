@@ -1,0 +1,41 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+ import java.util.Scanner;
+
+class BPr78 {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter a string: ");
+    String input = scanner.next();
+    System.out.print("Enter the character to remove: ");
+    char characterToRemove = scanner.next().charAt(0);
+    String result = removeCharacter(input, characterToRemove);
+    System.out.println("Result: " + result);
+  }
+
+  public static String removeCharacter(String str, char character) {
+    StringBuilder result = new StringBuilder();
+    for (int i = 0; i < str.length(); i++) {
+      if (str.charAt(i) != character) {
+        result.append(str.charAt(i));
+      }
+    }
+    return result.toString();
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter a string: madfhu
+Enter the character to remove: f
+Result: madhu
+</p></pre>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+
+<html>
+<head>
+<title>Exception Handling</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class Exception7{
+public static void checkVowels(String input) throws Exception{
+boolean hasVowels = false;
+for (char c : input.toLowerCase().toCharArray()){
+if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+hasVowels = true;
+break;
+}
+}
+if (!hasVowels){
+throw new Exception("String does not contain vowels : " + input);
+}
+System.out.println("String contains vowels : " + input);
+}
+public static void main(String st[]){
+try{
+checkVowels("Exception Handling"); 
+checkVowels("rhythm"); 
+}
+catch(Exception e){
+System.out.println(e.getMessage());
+}
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+String contains vowels : Exception Handling
+String does not contain vowels : rhythm
+</p></pre>
+</body>
+</html>

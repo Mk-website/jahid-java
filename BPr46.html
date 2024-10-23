@@ -1,0 +1,56 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class BPr46 {
+    public static void main(String[] args) {
+        // Define the grades and credits for each subject
+        char[] grades = {'A', 'B', 'C', 'D', 'F'};
+        int[] credits = {3, 4, 3, 2, 4};
+
+        double totalGP = 0;
+        double totalCredits = 0;
+
+        for (int i = 0; i < grades.length; i++) {
+            double gp = getGradePoint(grades[i]);
+            totalGP += gp * credits[i];
+            totalCredits += credits[i];
+        }
+
+        double cgpa = totalGP / totalCredits;
+        double percentage = cgpa * 9.5;
+
+        System.out.println("CGPA: " + String.format("%.2f", cgpa));
+        System.out.println("Percentage: " + String.format("%.2f", percentage));
+    }
+
+    private static double getGradePoint(char grade) {
+        switch (grade) {
+            case 'A':
+                return 4.0;
+            case 'B':
+                return 3.0;
+            case 'C':
+                return 2.0;
+            case 'D':
+                return 1.0;
+            case 'F':
+                return 0.0;
+            default:
+                return 0.0;
+        }
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+CGPA: 2.00
+Percentage: 19.00
+</p></pre>
+</body>
+</html>

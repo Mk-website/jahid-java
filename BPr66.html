@@ -1,0 +1,42 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.util.Scanner;
+class BPr66 {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter First Number: ");
+    int num1 = scanner.nextInt();
+
+    System.out.print("Enter Second Number: ");
+    int num2 = scanner.nextInt();
+
+    System.out.print("Enter Third Number: ");
+    int num3 = scanner.nextInt();
+
+    if (num1 < num2 && num2 < num3) {
+      System.out.println("Numbers are in increasing order");
+    } else if (num1 > num2 && num2 > num3) {
+      System.out.println("Numbers are in decreasing order");
+    } else {
+      System.out.println("Numbers are not in order");
+    }
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter First Number: 45
+Enter Second Number: 46
+Enter Third Number: 47
+Numbers are in increasing order
+</p></pre>
+</body>
+</html>

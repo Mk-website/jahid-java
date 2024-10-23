@@ -1,0 +1,84 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.util.Scanner;
+
+class BPr89{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter the size of the first array: ");
+    int size1 = scanner.nextInt();
+
+    int[] array1 = new int[size1];
+
+    System.out.println("Enter the elements of the first array:");
+    for (int i = 0; i < size1; i++) {
+      array1[i] = scanner.nextInt();
+    }
+
+    System.out.print("Enter the size of the second array: ");
+    int size2 = scanner.nextInt();
+
+    int[] array2 = new int[size2];
+
+    System.out.println("Enter the elements of the second array:");
+    for (int i = 0; i < size2; i++) {
+      array2[i] = scanner.nextInt();
+    }
+
+    int[] commonElements = findCommonElements(array1, array2);
+
+    System.out.println("Common elements:");
+    for (int i = 0; i < commonElements.length; i++) {
+      System.out.print(commonElements[i] + " ");
+    }
+  }
+
+  public static int[] findCommonElements(int[] array1, int[] array2) {
+    int[] commonElements = new int[Math.min(array1.length, array2.length)];
+
+    int index = 0;
+
+    for (int i = 0; i < array1.length; i++) {
+      for (int j = 0; j < array2.length; j++) {
+        if (array1[i] == array2[j]) {
+          commonElements[index++] = array1[i];
+          break;
+        }
+      }
+    }
+
+    int[] result = new int[index];
+
+    for (int i = 0; i < index; i++) {
+      result[i] = commonElements[i];
+    }
+
+    return result;
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter the size of the first array: 3
+Enter the elements of the first array:
+1
+2
+3
+Enter the size of the second array: 3
+Enter the elements of the second array:
+1
+2
+3
+Common elements:
+1 2 3
+</p></pre>
+</body>
+</html>

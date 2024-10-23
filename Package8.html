@@ -1,0 +1,42 @@
+
+
+<html>
+<head>
+<title>Package</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+package p8;
+public class abc{
+protected int age;
+protected String name;
+void display(int age,String name){
+System.out.println("Age is : "+age+"   "+"Name is : "+name);
+}
+}
+
+class Main extends abc{
+public static void main(String st[]){
+Main obj=new Main();
+obj.display(22,"Savita");
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+C:\Packages>javac -d C:\Packages 8.java
+
+C:\Packages>java p8.Main
+Age is : 22   Name is : Savita
+</p></pre>
+</body>
+</html>

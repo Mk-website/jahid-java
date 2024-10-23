@@ -1,0 +1,37 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class BPr26{
+    public static void main(String[] args) {
+        int number = 12345; // example input
+
+        int sum = addDigits(number);
+
+        System.out.println("Sum of digits of " + number + ": " + sum);
+    }
+
+    public static int addDigits(int number) {
+        int sum = 0;
+
+        while (number != 0) {
+            int digit = number % 10;
+            sum += digit;
+            number /= 10;
+        }
+
+        return sum;
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Sum of digits of 12345: 15
+</p></pre>
+</body>
+</html>

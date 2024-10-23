@@ -1,0 +1,29 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class BPr31{
+    public static void main(String[] args) {
+        double diagonal1 = 6.0; // example input
+        double diagonal2 = 8.0; // example input
+
+        double area = calculateRhombusArea(diagonal1, diagonal2);
+
+        System.out.println("Area of rhombus with diagonals " + diagonal1 + " and " + diagonal2 + ": " + area);
+    }
+
+    public static double calculateRhombusArea(double diagonal1, double diagonal2) {
+        double area = (diagonal1 * diagonal2) / 2;
+        return area;}}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Area of rhombus with diagonals 6.0 and 8.0: 24.0
+</p></pre>
+</body>
+</html>

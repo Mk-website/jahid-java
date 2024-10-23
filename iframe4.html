@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>JAVA</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<style>
+        body{
+           margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;         
+}
+
+               .sidebar {
+            background-color: #00bcd4; 
+            color: #fff;
+            width: 300px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            font-size: 2rem;
+            padding-top: 30px;
+            font-weight: bold;
+
+            overflow-y: auto; /* Make sidebar scrollable */
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+        }
+        .sidebar a:hover {
+            background-color: black;
+        }
+        .dropdown-container {
+            display: none;
+            background-color: #444;
+            padding-left: 20px;
+            font-size:2rem;
+        }
+        .dropdown-btn {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .dropdown-btn i {
+            margin-left: 0; /* Remove space between text and dropdown icon */
+        }
+        .content {
+            margin-left: 320px;
+            padding: 20px;
+        }
+        .content h1 {
+         color: black;
+         text-align: center;
+         margin: 0;
+         font-weight: bold;
+
+        }
+        .content .box {
+            background-color: white;
+            font-color:black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 1rem;
+            word-wrap: break-word;
+        } 
+        .box p{
+         font-size:20px;
+
+         }
+       
+  </style>
+ </head>
+ <body>
+   
+  <div class="sidebar">
+   <a href="Fun1.html" target ="myframe">
+Write a Java method to find the smallest number among three numbers.
+    </a>
+<a href="Fun2.html" target ="myframe">
+Write a Java method to compute the average of three numbers.
+    </a>
+<a href="Fun3.html" target ="myframe">
+Write a Java method to display the middle character of a string. Note: a) If the length of the string is odd there will be two middle characters. b) If the length of the string is even there will be one middle character. 
+    </a>
+<a href="Fun4.html" target ="myframe">
+Write a Java method to count all the words in a string.
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method to compute the future investment value at a given interest rate 
+for a specified number of years.
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method to print characters between two characters (i.e. A to P).
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method to check whether a string is a valid password.
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method to display the current date and time.
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method to find all twin prime numbers less than 100.
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method to count the number of digits in an integer with the value 2. The integer may be assumed to be non-negative.
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method that accepts three integers and checks whether they are consecutive or not. Returns true or false.
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false
+    </a>
+<a href=".html" target ="myframe">
+Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.
+    </a>
+<br>
+
+   </div>
+  </div>
+  <div class="content">
+   <h1 style="font-size:4vw">
+    JAVA PROGRAMS
+   </h1>
+   <div class="box">
+ <p><iframe name="myframe" height="100%" width="100%"></iframe>
+   </p></div>
+  </div>
+  <script>
+   var dropdown = document.getElementsByClassName("dropdown-btn");
+        for (var i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+  </script>
+ </body>
+</html>

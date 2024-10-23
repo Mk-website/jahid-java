@@ -1,0 +1,55 @@
+
+
+<html>
+<head>
+<title>Interface</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+interface Drawable{
+void draw();
+}
+class Circle implements Drawable{
+public void draw(){
+System.out.println("Drawing a Circle.");
+}
+}
+class Rectangle implements Drawable{
+public void draw(){
+System.out.println("Drawing a Rectangle.");
+}
+}
+class Triangle implements Drawable{
+public void draw(){
+System.out.println("Drawing a Triangle.");
+}
+}
+class Main{
+public static void main(String st[]){
+Drawable circle = new Circle();
+Drawable rectangle = new Rectangle();
+Drawable triangle = new Triangle();
+circle.draw();
+rectangle.draw();
+triangle.draw();
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+C:\javaFolders\Interfaces>java Main
+Drawing a Circle.
+Drawing a Rectangle.
+Drawing a Triangle.
+</p></pre>
+</body>
+</html>

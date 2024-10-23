@@ -1,0 +1,30 @@
+
+
+<html>
+<head>
+<title>String</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class Str13 {
+    public static void main(String[] args) {
+        String str = "Hello world, this is a test string";
+        System.out.println(str);
+        // Split the string into an array using whitespace as a delimiter
+        String[] words = str.split("\\s+");
+        
+        // Count the number of words in the array
+        int wordCount = words.length;
+
+        System.out.println("Number of words: " + wordCount);
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Hello world, this is a test string
+Number of words: 7
+</p></pre>
+</body>
+</html>

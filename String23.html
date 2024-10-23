@@ -1,0 +1,36 @@
+
+
+<html>
+<head>
+<title>String</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class Str23 {
+    public static void main(String[] args) {
+        String str = "hello world";
+        String reversedStr = reverseString(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Reversed string: " + reversedStr);
+    }
+
+    public static String reverseString(String str) {
+        String reversedStr = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversedStr += str.charAt(i);
+        }
+
+        return reversedStr;
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Original string: hello world
+Reversed string: dlrow olleh
+</p></pre>
+</body>
+</html>

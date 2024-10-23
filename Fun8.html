@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Function</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class Fun8{
+    public static void displayCurrentDateTime() {
+        long currentTime = System.currentTimeMillis();
+        // Convert milliseconds to date and time
+        String formattedDateTime = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date(currentTime));
+        System.out.println("Current date and time: " + formattedDateTime);
+    }
+
+    public static void main(String[] args) {
+        displayCurrentDateTime();
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Current date and time: 2024-09-08 17:38:24
+</p></pre>
+</body>
+</html>

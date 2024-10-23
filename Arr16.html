@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Array</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class Arr16{
+public static void main(String args[]){
+int array[] = {10,121,67,34,59,10,67};
+int size=array.length;
+System.out.println("Original Array elements after sorting:");  
+for (int i = 0; i < size; i++){  
+for (int j = i + 1; j < size; j++){  
+int tmp = 0;  
+if (array[i] > array[j]){  
+tmp = array[i];  
+array[i] = array[j];  
+array[j] = tmp;  
+}}    
+System.out.print(array[i]+" ");  
+}          
+int[] temp = new int[size];
+int newSize = 0;
+for (int i = 0; i < size; i++){
+boolean isDuplicate = false;
+for (int j = 0; j < newSize; j++) {
+if (array[i] == temp[j]) {
+isDuplicate = true;
+break;
+}}
+if(!isDuplicate){
+temp[newSize] = array[i];
+newSize++;
+}}
+int[] uniqueArray = new int[newSize];
+for (int i = 0; i < newSize; i++) {
+uniqueArray[i] = temp[i];
+}
+System.out.print("\nArray without duplicates: \n");
+for (int i = 0; i < uniqueArray.length; i++) {
+System.out.print(uniqueArray[i] + " ");
+}
+System.out.println("\nThird largest number is : "+uniqueArray[uniqueArray.length-3]);
+}}
+<h1><center>OUTPUT</center><h1>
+<p>
+Original Array elements after sorting:
+10 10 34 59 67 67 121
+Array without duplicates:
+10 34 59 67 121
+Third largest number is : 59
+</p></pre>
+</body>
+</html>

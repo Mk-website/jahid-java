@@ -1,0 +1,60 @@
+
+
+<html>
+<head>
+<title>Exception Handling</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+class EH5{
+  public static void readFile(String fileName) throws IOException, Exception {
+    try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+      String line;
+      boolean isEmpty = true;
+      while ((line = reader.readLine()) != null) {
+        if (!line.trim().isEmpty()) {
+          isEmpty = false;
+          System.out.println(line);
+        }
+      }
+      if (isEmpty) {
+        throw new Exception("The file " + fileName + " is empty.");
+      }
+    } catch (IOException e) {
+      throw new IOException("The file " + fileName + " was not found.", e);
+    }
+  }
+
+  public static void main(String[] args) {
+    try {
+      readFile("file1.txt"); 
+    } catch (IOException e) {
+      System.out.println(e.getMessage());
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+  }
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+G:\COLLEGE WORK\ProjectPrograms\ExceptionHandling>javac EH5.java
+
+G:\COLLEGE WORK\ProjectPrograms\ExceptionHandling>java EH5
+The file file1.txt is empty.
+</p></pre>
+</body>
+</html>

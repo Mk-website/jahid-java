@@ -1,0 +1,35 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.util.Scanner;
+class BPr64{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter a positive integer:");
+    int number = scanner.nextInt();
+    if (number <= 0) {
+      System.out.println("Please enter a positive integer.");
+      return;
+    }
+    int count = 0;
+    while (number > 0) {
+      number /= 10;
+      count++;
+    }
+    System.out.println("The number of digits is: " + count);
+  }s}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter a positive integer:
+678
+The number of digits is: 3
+</p></pre>
+</body>
+</html>

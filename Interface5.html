@@ -1,0 +1,60 @@
+
+
+<html>
+<head>
+<title>Interface</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+interface Resizable{
+void resizeWidth(int width);
+void resizeHeight(int height);
+}
+class Rectangle implements Resizable{
+private int width;
+private int height;
+public Rectangle(int width, int height){
+this.width = width;
+this.height = height;
+}
+public void resizeWidth(int width){
+this.width = width;
+}
+public void resizeHeight(int height){
+this.height = height;
+}
+public void displayDimensions(){
+System.out.println("Width of Rectangle is : " + width + " and  Height of Rectangle is : " + height);
+}
+}
+class Main{
+public static void main(String st[]){
+Rectangle rectangle = new Rectangle(25, 35);
+System.out.println("Initial dimensions:");
+rectangle.displayDimensions();
+rectangle.resizeWidth(30);
+rectangle.resizeHeight(40);
+System.out.println("Resized dimensions:");
+rectangle.displayDimensions();
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+C:\javaFolders\Interfaces>java Main
+Initial dimensions:
+Width of Rectangle is : 25 and  Height of Rectangle is : 35
+Resized dimensions:
+Width of Rectangle is : 30 and  Height of Rectangle is : 40
+</p></pre>
+</body>
+</html>

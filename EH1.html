@@ -1,0 +1,44 @@
+
+
+<html>
+<head>
+<title>Exception Handling</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class Exception1{
+public static void main(String st[]){
+try{
+System.out.println("Try block.");
+int result = 41 / 0; 
+} 
+catch (ArithmeticException e){
+System.out.println("Caught an ArithmeticException: " + e.getMessage());
+} 
+catch (ArrayIndexOutOfBoundsException e){
+System.out.println("Caught an ArrayIndexOutOfBoundsException: " + e.getMessage());
+} 
+finally{
+System.out.println("Finally");
+}
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+C:\javaFolders\Exception Handling>java exception1
+Try block.
+Caught an ArithmeticException: / by zero
+Finally
+</p></pre>
+</body>
+</html>

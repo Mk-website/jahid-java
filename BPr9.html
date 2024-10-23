@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Data Conversion</title>
+<head>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+class CheckJavaInstallation{
+public static void main(String[] args){
+String command = "java -version"; // Command to check Java version
+try{
+Process process = Runtime.getRuntime().exec(command);
+BufferedReader reader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+String line;
+boolean isJavaInstalled = false;
+while ((line = reader.readLine()) != null){
+if (line.startsWith("java version") || line.startsWith("openjdk version")){
+isJavaInstalled = true;
+break;
+}
+}
+process.waitFor();
+if (isJavaInstalled){
+System.out.println("Java is installed on your computer.");
+} else{
+System.out.println("Java is not installed on your computer.");
+}
+} catch(Exception e){
+e.printStackTrace();
+System.out.println("An error occurred while checking Java installation.");
+}
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+Java is installed on your computer.
+</p></pre>
+</body>
+</html>

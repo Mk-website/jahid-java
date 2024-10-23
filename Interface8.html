@@ -1,0 +1,55 @@
+
+
+<html>
+<head>
+<title>Interface</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+interface Playable{
+void play();
+}
+class Football implements Playable{
+public void play(){
+System.out.println("Playing Football");
+}
+}
+class Volleyball implements Playable{
+public void play(){
+System.out.println("Playing Volleyball");
+}
+}
+class Basketball implements Playable{
+public void play(){
+System.out.println("Playing Basketball");
+}
+}
+class Main{
+public static void main(String[] args){
+Playable football = new Football();
+Playable volleyball = new Volleyball();
+Playable basketball = new Basketball();
+football.play();
+volleyball.play();
+basketball.play();
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+C:\javaFolders\Interfaces>java Main
+Playing Football
+Playing Volleyball
+Playing Basketball
+</p></pre>
+</body>
+</html>

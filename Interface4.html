@@ -1,0 +1,125 @@
+
+
+<html>
+<head>
+<title>Interface</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>interface Account{
+void deposit(double amount);
+void withdraw(double amount);
+double getBalance();
+void calculateInterest();
+}
+class Bank{
+private Account[] accounts;
+private int accountCount;
+public Bank(int capacity){
+accounts = new Account[capacity];
+accountCount = 0;
+}
+public void addAccount(Account account){
+if (accountCount < accounts.length){
+accounts[accountCount++] = account;
+} 
+else{
+System.out.println("Bank is at full capacity, Cannot add more accounts.");
+}
+}
+public void displayAllBalances(){
+for (int i = 0; i < accountCount; i++){
+System.out.println("Balance: $" + accounts[i].getBalance());
+}
+}
+}
+class SavingsAccount implements Account{
+private double balance;
+private double interestRate;
+public SavingsAccount(double balance, double interestRate){
+this.balance = balance;
+this.interestRate = interestRate;
+}
+public void deposit(double amount){
+balance += amount;
+}
+public void withdraw(double amount){
+if (amount <= balance){
+balance -= amount;
+} 
+else{
+System.out.println("Insufficient funds for withdrawal.");
+}
+}
+public double getBalance(){
+return balance;
+}
+public void calculateInterest(){
+balance += balance * (interestRate / 100);
+}
+public double getInterestRate(){
+return interestRate;
+}
+}
+class CurrentAccount implements Account{
+private double balance;
+private double overdraftLimit;
+public CurrentAccount(double balance, double overdraftLimit){
+this.balance = balance;
+this.overdraftLimit = overdraftLimit;
+}
+public void deposit(double amount){
+balance += amount;
+}
+public void withdraw(double amount){
+if (amount <= balance + overdraftLimit){
+balance -= amount;
+} 
+else{
+System.out.println("Overdraft limit exceeded.");
+}
+}
+public double getBalance(){
+return balance;
+}
+public void calculateInterest(){
+System.out.println("Current accounts do not have interest.");
+}
+public double getOverdraftLimit(){
+return overdraftLimit;
+}
+}
+class Main{
+public static void main(String st[]){
+Bank bank = new Bank(3);
+Account savingsAccount = new SavingsAccount(25000, 10); 
+Account currentAccount = new CurrentAccount(1000, 400); 
+bank.addAccount(savingsAccount);
+bank.addAccount(currentAccount);
+savingsAccount.deposit(200);
+savingsAccount.withdraw(100);
+((SavingsAccount) savingsAccount).calculateInterest();
+currentAccount.deposit(100);
+currentAccount.withdraw(600);
+System.out.println("Account Balances:");
+bank.displayAllBalances();
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+C:\javaFolders\Interfaces>java Main
+Account Balances:
+Balance: $27610.0
+Balance: $500.0
+</p></pre>
+</body>
+</html>

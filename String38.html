@@ -1,0 +1,37 @@
+
+
+<html>
+<head>
+<title>String</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class Str38{
+    public static void main(String[] args) {
+        String str = "Hello World, this is a test";
+        String swappedCase = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (Character.isLowerCase(c)) {
+                swappedCase += Character.toUpperCase(c);
+            } else if (Character.isUpperCase(c)) {
+                swappedCase += Character.toLowerCase(c);
+            } else {
+                swappedCase += c;
+            }
+        }
+
+        System.out.println("Original string: " + str);
+        System.out.println("String with swapped case: " + swappedCase);
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Original string: Hello World, this is a test
+String with swapped case: hELLO wORLD, THIS IS A TEST
+</p></pre>
+</body>
+</html>

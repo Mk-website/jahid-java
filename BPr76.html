@@ -1,0 +1,27 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+class BPr76 {
+  public static void main(String[] args) {
+    LocalDateTime now = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    String formattedDateTime = now.format(formatter);
+    System.out.println("Current date and time: " + formattedDateTime);
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Current date and time: 2024-09-13 22:09:45
+</p></pre>
+</body>
+</html>

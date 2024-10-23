@@ -1,0 +1,48 @@
+
+
+<html>
+<head>
+<title>String</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class Str26{
+    public static void main(String[] args) {
+        String str = "hello world";
+        printCharacterFrequencies(str);
+    }
+
+    public static void printCharacterFrequencies(String str) {
+        int[] charCounts = new int[256]; // assuming ASCII characters only
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c != ' ') { // ignore spaces
+                charCounts[c]++;
+            }
+        }
+
+        System.out.println("Character frequencies: ");
+        for (int i = 0; i < 256; i++) {
+            if (charCounts[i] > 0) {
+                char c = (char) i;
+                System.out.println(c + " - " + charCounts[i] + " times");
+            }
+        }
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Character frequencies:
+d - 1 times
+e - 1 times
+h - 1 times
+l - 3 times
+o - 2 times
+r - 1 times
+w - 1 times
+</p></pre>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+
+<html>
+<head>
+<title>Inheritance</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class Animal{
+void makesound(){
+System.out.println("Make Sound");
+}
+}
+class Cat extends Animal{
+void makesound(){
+System.out.println("Bark");
+}
+}
+class Main{
+public static void main(String[] args){
+Animal obj1=new Animal();
+obj1.makesound();
+Cat obj2=new Cat();
+obj2.makesound();
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+Make Sound
+Bark
+</p></pre>
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.util.Scanner;
+
+class BPr85{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter the size of the array: ");
+    int size = scanner.nextInt();
+
+    int[] array = new int[size];
+
+    System.out.println("Enter the elements of the array:");
+    for (int i = 0; i < size; i++) {
+      array[i] = scanner.nextInt();
+    }
+
+    System.out.print("Enter the value to search for: ");
+    int target = scanner.nextInt();
+
+    boolean contains = containsValue(array, target);
+
+    if (contains) {
+      System.out.println("Array contains the value " + target);
+    } else {
+      System.out.println("Array does not contain the value " + target);
+    }
+  }
+
+  public static boolean containsValue(int[] array, int target) {
+    for (int i = 0; i < array.length; i++) {
+      if (array[i] == target) {
+        return true;
+      }
+    }
+    return false;
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter the size of the array: 3
+Enter the elements of the array:
+2
+6
+8
+Enter the value to search for: 7
+Array does not contain the value 7
+</p></pre>
+</body>
+</html>

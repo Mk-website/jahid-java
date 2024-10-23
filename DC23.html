@@ -1,0 +1,32 @@
+
+
+<html>
+<head>
+<title>Data Conversion</title>
+<head>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class DtoT{
+public static void main(String[] args){
+java.util.Date date = new java.util.Date();
+java.sql.Timestamp timestamp = new java.sql.Timestamp(date.getTime());
+System.out.println(timestamp); 
+}
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+2024-09-14 01:09:42.178
+</p></pre>
+</body>
+</html>

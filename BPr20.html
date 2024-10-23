@@ -1,0 +1,45 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class BPr20 {
+    public static void main(String[] args) {
+        int count = 0;
+        int sum = 0;
+        int num = 2;
+
+        while (count < 100) {
+            if (isPrime(num)) {
+                sum += num;
+                count++;
+            }
+            num++;
+        }
+
+        System.out.println("The sum of the first 100 prime numbers is: " + sum);
+    }
+
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+The sum of the first 100 prime numbers is: 24133
+</p></pre>
+</body>
+</html>

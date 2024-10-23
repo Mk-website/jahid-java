@@ -1,0 +1,35 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class BPr25 {
+    public static void main(String[] args) {
+        int a = 5; // example input
+        int b = 7; // example input
+
+        int sum = addWithoutArithmetic(a, b);
+
+        System.out.println("Sum of " + a + " and " + b + ": " + sum);
+    }
+
+    public static int addWithoutArithmetic(int a, int b) {
+        while (b != 0) {
+            int carry = a & b;
+            a = a ^ b;
+            b = carry << 1;
+        }
+        return a;
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Sum of 5 and 7: 12
+</p></pre>
+</body>
+</html>

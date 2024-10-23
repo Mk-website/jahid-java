@@ -1,0 +1,42 @@
+
+
+<html>
+<head>
+<title>String</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class Str3{
+    public static void main(String[] args) {
+        String original = "Hello";
+        String modified = original;
+
+        System.out.println("Original: " + original);
+        System.out.println("Modified: " + modified);
+
+        // Try to modify the original string
+        original += " World!";
+
+        System.out.println("Original after modification: " + original);
+        System.out.println("Modified after original modification: " + modified);
+    }
+}
+<h1><center>OUTPUT</center><h1>
+<p>
+Original: Hello
+Modified: Hello
+Original after modification: Hello World!
+Modified after original modification: Hello
+</p></pre>
+</body>
+</html>

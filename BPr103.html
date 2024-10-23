@@ -1,0 +1,50 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class BPr103{
+public static void main(String[] args) {
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        System.out.println("Original Matrix:");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int[][] transposedMatrix = new int[matrix[0].length][matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                transposedMatrix[j][i] = matrix[i][j];
+            }
+        }
+        System.out.println("Transposed Matrix:");
+        for (int i = 0; i < transposedMatrix.length; i++) {
+            for (int j = 0; j < transposedMatrix[i].length; j++) {
+                System.out.print(transposedMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }}}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Original Matrix:
+1 2 3
+4 5 6
+7 8 9
+Transposed Matrix:
+1 4 7
+2 5 8
+3 6 9
+</p></pre>
+</body>
+</html>

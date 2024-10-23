@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Array</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+class sortingInjava{
+public static void main(String[] args){
+int[] array = {28,99,32,77,45,22,01,35,21};          
+System.out.println("Array elements after sorting:");  
+for (int i = 0; i < array.length; i++){  
+for (int j = i + 1; j < array.length; j++){  
+int tmp = 0;  
+if (array[i] > array[j]){  
+tmp = array[i];  
+array[i] = array[j];  
+array[j] = tmp;  
+}
+}
+}
+for(int i = 0; i < array.length; i++){
+System.out.print(array[i]+" ");
+}
+}
+}  
+<h1><center>OUTPUT</center><h1>
+<p>
+Array elements after sorting:
+1 21 22 28 32 35 45 77 99
+</p></pre>
+</body>
+</html>      

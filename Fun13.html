@@ -1,0 +1,36 @@
+
+
+
+<html>
+<head>
+<title>Function</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+class Fun13{
+public static boolean areAllVowels(String str) {
+        str = str.toLowerCase(); // convert the string to lowercase for case-insensitive comparison
+        for (char c : str.toCharArray()) {
+            if (!(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')) {
+                return false; // if any character is not a vowel, return false
+            }
+        }
+        return true; // if all characters are vowels, return true
+    }
+
+    public static void main(String[] args) {
+        System.out.println(areAllVowels("aeiou"));  // true
+        System.out.println(areAllVowels("hello"));  // false
+        System.out.println(areAllVowels("AEIOU"));  // true
+    }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+true
+false
+true
+</p></pre>
+</body>
+</html>

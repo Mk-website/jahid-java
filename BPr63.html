@@ -1,0 +1,36 @@
+
+
+<html>
+<head>
+<title>Basic Programming Constructs</title>
+</head>
+<body>
+<pre>
+<h1 style="font-size:6vw"><center>INPUT</center><h1>
+<p style="font-size:3vw">
+import java.util.Scanner;
+
+class BPr63{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter an integer:");
+    int number = scanner.nextInt();
+
+    if (number < 0) {
+      System.out.println(number + " is a negative number.");
+    } else if (number == 0) {
+      System.out.println(number + " is zero.");
+    } else {
+      System.out.println(number + " is a positive number.");
+    }
+  }
+}
+<h1 style="font-size:5vw"><center>OUTPUT</center><h1>
+<p style="font-size:3vw">
+Enter an integer:
+6
+6 is a positive number.
+</p></pre>
+</body>
+</html>

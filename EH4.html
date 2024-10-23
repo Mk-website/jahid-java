@@ -1,0 +1,55 @@
+
+
+<html>
+<head>
+<title>Exception Handling</title>
+<style>
+h1{
+font-family: courier;
+}
+p{
+font-family: courier;
+}
+</style>
+</head>
+<body>
+<pre>
+<h1><center>INPUT</center><h1>
+<p>
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+class EH4{
+public static void readNumbersFromFile(String fileName) throws IOException, Exception {
+try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+      String line;
+      while ((line = reader.readLine()) != null) {
+        String[] numbers = line.split(" ");
+        for (String numberStr : numbers) {
+          int number = Integer.parseInt(numberStr);
+          if (number > 0) {
+            throw new Exception("Positive number found: " + number);
+          }
+          System.out.println(number);
+        }}} 
+    catch (IOException e) {
+      throw new IOException("The file " + fileName + " was not found.", e);
+    }}
+  public static void main(String[] args) {
+    try {
+      readNumbersFromFile("numbers.txt"); 
+    } catch (IOException e) {
+      System.out.println(e.getMessage());
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }}}
+<h1><center>OUTPUT</center><h1>
+<p>
+G:\COLLEGE WORK\ProjectPrograms\ExceptionHandling>javac EH4.java
+
+G:\COLLEGE WORK\ProjectPrograms\ExceptionHandling>java EH4
+The file numbers.txt was not found.
+</p></pre>
+</body>
+</html>
