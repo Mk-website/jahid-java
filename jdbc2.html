@@ -1,59 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Array</title>
-<style>
-h1{
-font-family: courier;
-}
-p{
-font-family: courier;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
 </head>
 <body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
 <pre>
-<h1><center>INPUT</center><h1>
-<p>
 import java.sql.*;
-class jdbc2{
-public static void main(String s[]) throws java.lang.ClassNotFoundException,SQLException{
-Class.forName("com.mysql.jdbc.Driver");
-Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/classwork","root","root");
-Statement st=conn.createStatement();
-System.out.println(st.executeUpdate("CREATE TABLE Persons(PersonID int,FirstName varchar(20), LastName varchar(20), City varchar(15));"));
+class database
+{
+public static void main(String st[])
+{
+try
+{
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql:
+//localhost:3306/student","root","Jahid@111");
+Statement str=con.createStatement();
+int a=str.executeUpdate("create table bca(rollno int,name varchar(20))");
+if(a>0)
+{
+System.out.println("Table created successfully");
+}
+con.close();
+}
+catch(ClassNotFoundException | SQLException e)
+{
+System.out.println("Cannot create a table");
 }
 }
-<h1><center>OUTPUT</center><h1>
-<p>
-C:\javaFolders\JAVA DATABASE CONNECTIVITY>javac jdbc2.java
+}
+    
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java database
+Cannot create a table
+</pre>
+        </div>
+    </div>
 
-C:\javaFolders\JAVA DATABASE CONNECTIVITY>java jdbc2
-0
-
-..........
-
-mysql> use classwork;
-Database changed
-mysql> show tables;
-+---------------------+
-| Tables_in_classwork |
-+---------------------+
-| persons             |
-| railways            |
-| student             |
-+---------------------+
-3 rows in set (0.00 sec)
-
-mysql> desc persons;
-+-----------+-------------+------+-----+---------+-------+
-| Field     | Type        | Null | Key | Default | Extra |
-+-----------+-------------+------+-----+---------+-------+
-| PersonID  | int(11)     | YES  |     | NULL    |       |
-| FirstName | varchar(20) | YES  |     | NULL    |       |
-| LastName  | varchar(20) | YES  |     | NULL    |       |
-| City      | varchar(15) | YES  |     | NULL    |       |
-+-----------+-------------+------+-----+---------+-------+
-4 rows in set (0.03 sec)
-</p></pre>
 </body>
 </html>

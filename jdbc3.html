@@ -1,54 +1,56 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Array</title>
-<style>
-h1{
-font-family: courier;
-}
-p{
-font-family: courier;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
 </head>
 <body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
 <pre>
-<h1><center>INPUT</center><h1>
-<p>
 import java.sql.*;
-class jdbc{
-public static void main(String s[]) throws java.lang.ClassNotFoundException,SQLException{
-Class.forName("com.mysql.jdbc.Driver");
-Connection c1=DriverManager.getConnection("jdbc:mysql://localhost:3306/classwork","root","root");
-Statement st=c1.createStatement();
-System.out.println(st.executeUpdate("insert into student values(4241,'Savita','CHD',70)"));
-c1.close();
+class database
+{
+public static void main(String st[])
+{
+try
+{
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql:
+//localhost:3306/student","root","Jahid@111");
+Statement str=con.createStatement();
+int a=str.executeUpdate("insert into bca values(4247,'Amandeep')");
+if(a>0)
+{
+System.out.println("Value inserted successfully");
+}
+con.close();
+}
+catch(ClassNotFoundException | SQLException e)
+{
+System.out.println("Cannot insert a value");
 }
 }
-<h1><center>OUTPUT</center><h1>
-<p>
-C:\javaFolders\JAVA DATABASE CONNECTIVITY>javac jdbc3.java
+}
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+C:\Users\Mohd Jahid\Java Programs>java database
+Value inserted successfully
+</pre>
+        </div>
+    </div>
 
-C:\javaFolders\JAVA DATABASE CONNECTIVITY>java jdbc
-1
-
-...........
-
-mysql> select * from student;
-+--------+------+-------+-------+
-| rollno | name | city  | marks |
-+--------+------+-------+-------+
-|      1 | xyz  | delhi |    66 |
-+--------+------+-------+-------+
-1 row in set (0.00 sec)
-
-mysql> select * from student;
-+--------+--------+-------+-------+
-| rollno | name   | city  | marks |
-+--------+--------+-------+-------+
-|      1 | xyz    | delhi |    66 |
-|   4241 | Savita | CHD   |    70 |
-+--------+--------+-------+-------+
-2 rows in set (0.00 sec)
-</p></pre>
 </body>
 </html>
